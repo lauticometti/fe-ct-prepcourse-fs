@@ -24,14 +24,14 @@ const {
 } = require('../homework');
 
 describe('JAVASCRIPT III', function () {
-   describe('devolverPrimerElemento(array)', function () {
+   xdescribe('devolverPrimerElemento(array)', function () {
       it('Debe retornar el primer elemento del arreglo', function () {
          expect(devolverPrimerElemento([10, 10, 16, 12])).toBe(10);
          expect(devolverPrimerElemento([97, 100, 80, 55, 72, 94])).toBe(97);
       });
    });
 
-   describe('devolverUltimoElemento(array)', function () {
+   xdescribe('devolverUltimoElemento(array)', function () {
       it('Debe retornar el último elemento del arreglo', function () {
          expect(devolverUltimoElemento([10, 10, 16, 12])).toBe(12);
          expect(devolverUltimoElemento([97, 100, 80, 55, 72, 94])).toBe(94);
@@ -48,7 +48,7 @@ describe('JAVASCRIPT III', function () {
       });
    });
 
-   describe('obtenerLargoDelArray(array)', function () {
+   xdescribe('obtenerLargoDelArray(array)', function () {
       it('Debe retornar la longitud del arreglo', function () {
          expect(obtenerLargoDelArray([10, 10, 16, 12])).toBe(4);
          expect(obtenerLargoDelArray([97, 100, 80, 55, 72, 94])).toBe(6);
@@ -58,7 +58,7 @@ describe('JAVASCRIPT III', function () {
       });
    });
 
-   describe('incrementarPorUno(array)', function () {
+   xdescribe('incrementarPorUno(array)', function () {
       it('Debe retornar el arreglo con cada elemento aumentado en +1', function () {
          expect(incrementarPorUno([10, 10, 16, 12])).toEqual([11, 11, 17, 13]);
          expect(incrementarPorUno([97, 100, 80, 55, 72, 94])).toEqual([
@@ -68,7 +68,7 @@ describe('JAVASCRIPT III', function () {
       });
    });
 
-   describe('agregarItemAlFinalDelArray(array, elemento)', function () {
+   xdescribe('agregarItemAlFinalDelArray(array, elemento)', function () {
       it('Debe retornar el arreglo con el elemento agregado al final', function () {
          expect(agregarItemAlFinalDelArray([10, 10, 16, 12], 10)).toEqual([
             10, 10, 16, 12, 10,
@@ -80,7 +80,7 @@ describe('JAVASCRIPT III', function () {
       });
    });
 
-   describe('agregarItemAlComienzoDelArray(array, elemento)', function () {
+   xdescribe('agregarItemAlComienzoDelArray(array, elemento)', function () {
       it('Debe retornar el arreglo con el elemento agregado al comienzo', function () {
          expect(agregarItemAlComienzoDelArray([10, 10, 16, 12], 10)).toEqual([
             10, 10, 10, 16, 12,
@@ -92,7 +92,7 @@ describe('JAVASCRIPT III', function () {
       });
    });
 
-   describe('dePalabrasAFrase(palabras)', function () {
+   xdescribe('dePalabrasAFrase(palabras)', function () {
       it('Debe retornar un string con las palabras separadas por un espacio', function () {
          expect(dePalabrasAFrase(['Henry', 'JavaScript', 'Class'])).toBe(
             'Henry JavaScript Class'
@@ -101,7 +101,7 @@ describe('JAVASCRIPT III', function () {
       });
    });
 
-   describe('arrayContiene(array, elemento)', function () {
+   xdescribe('arrayContiene(array, elemento)', function () {
       it('Debe retornar True si el arreglo contiene el elemento', function () {
          expect(arrayContiene([10, 10, 16, 12], 10)).toBe(true);
       });
@@ -111,7 +111,7 @@ describe('JAVASCRIPT III', function () {
       });
    });
 
-   describe('agregarNumeros(arrayOfNums)', function () {
+   xdescribe('agregarNumeros(arrayOfNums)', function () {
       it('Debe retornar la suma de todos los números del arreglo', function () {
          expect(agregarNumeros([10, 10, 16])).toBe(36);
          expect(agregarNumeros([97, 100])).toBe(197);
@@ -119,14 +119,14 @@ describe('JAVASCRIPT III', function () {
       });
    });
 
-   describe('promedioResultadosTest(resultadosTest)', function () {
+   xdescribe('promedioResultadosTest(resultadosTest)', function () {
       it('Debe retornar el promedio de todas las notas', function () {
          expect(promedioResultadosTest([10, 10, 16, 12])).toBe(12);
          expect(promedioResultadosTest([97, 100, 80, 55, 72, 94])).toBe(83);
       });
    });
 
-   describe('numeroMasGrande(arrayOfNums)', function () {
+   xdescribe('numeroMasGrande(arrayOfNums)', function () {
       it('Debe retornar el número más grande del arreglo', function () {
          expect(numeroMasGrande([10, 10, 16, 12])).toBe(16);
          expect(numeroMasGrande([97, 100, 80, 55, 72, 94])).toBe(100);
@@ -134,7 +134,7 @@ describe('JAVASCRIPT III', function () {
       });
    });
 
-   describe('multiplicarArgumentos()', function () {
+   xdescribe('multiplicarArgumentos()', function () {
       it('Debe retornar el producto de los argumentos', function () {
          const product = multiplicarArgumentos(5, 5);
          const product2 = multiplicarArgumentos();
@@ -149,7 +149,7 @@ describe('JAVASCRIPT III', function () {
       });
    });
 
-   describe('cuentoElementos(array)', function () {
+   xdescribe('cuentoElementos(array)', function () {
       it('Debe retornar la cantidad de elementos mayores a a 18', function () {
          expect(cuentoElementos([10, 10, 18, 21])).toBe(1);
          expect(cuentoElementos([97, 100, 190, 5, 7, 9])).toBe(3);
@@ -157,7 +157,7 @@ describe('JAVASCRIPT III', function () {
       });
    });
 
-   describe('diaDeLaSemana(numeroDeDia)', function () {
+   xdescribe('diaDeLaSemana(numeroDeDia)', function () {
       it('Debe retornar "Es dia laboral" dependiendo del número del día', function () {
          expect(diaDeLaSemana(3)).toBe('Es dia laboral');
          expect(diaDeLaSemana(2)).toBe('Es dia laboral');

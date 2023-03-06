@@ -88,12 +88,22 @@ function empiezaConNueve(num) {
    // Esta función recibe por parámetro un número.
    // Debe retornar true si el entero inicia con 9 y false en otro caso.
    // Tu código:
+
+   const numStr = num.toString()
+   return numStr[0] === '9'
 }
 
 function todosIguales(array) {
    // Si todos los elementos del arreglo son iguales, retornar true.
    // Caso contrario retornar false.
    // Tu código:
+   let current = array[0];
+   for (let i = 1; i < array.length; i++ ) {
+      if (current === array[i]) current = array[i]
+      else return false 
+   }
+
+   return true
 }
 
 function mesesDelAño(array) {
@@ -101,18 +111,56 @@ function mesesDelAño(array) {
    // "Marzo" y "Noviembre", guardarlos en un nuevo arreglo y retornarlo.
    // Si alguno de los meses no está, retornar el string: "No se encontraron los meses pedidos".
    // Tu código:
+
+   // const toCatch = ["Enero", "Marzo", "Noviembre"]
+
+   // let contador = 0
+
+   // for (let i = 0; i < array.length; i++) {
+   //    if (toCatch.includes(array[i])) contador++
+   // }
+
+   // if (contador === 3) return toCatch
+   // return "No se encontraron los meses pedidos"
+   const toCatch = []
+
+   for (let i = 0; i < array.length; i++) {
+      if ( array[i] === "Enero" ) toCatch.push("Enero") 
+      if ( array[i] === "Marzo" ) toCatch.push("Marzo") 
+      if ( array[i] === "Noviembre" ) toCatch.push("Noviembre") 
+   }
+
+   if (toCatch.length === 3) return toCatch
+   return 'No se encontraron los meses pedidos'
 }
 
 function tablaDelSeis() {
    // Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
    // La función devuelve un arreglo con los resultados de la tabla de multiplicar del 6 en orden creciente.
    // Tu código:
+
+   const tablaSeis = []
+
+   for(let i = 0; i <= 10; i++) {
+      tablaSeis.push(i * 6)
+   }
+
+   return tablaSeis
 }
 
 function mayorACien(array) {
    // La función recibe un arreglo con enteros entre 0 y 200.
    // Recorrerlo y retornar un arreglo con todos los valores mayores a 100 (no incluye el 100).
    // Tu código:
+
+   const mayoresACien = []
+
+   for ( let num of array ) {
+      if ( num > 100 ) mayoresACien.push(num)
+   }
+
+   return mayoresACien
+
 }
 
 /* ----------------------------------------------------------------------------------
@@ -126,6 +174,20 @@ function breakStatement(num) {
    // la ejecución y retornar el string: "Se interrumpió la ejecución".
    // [PISTA]: utiliza el statement 'break'.
    // Tu código:
+
+   const newArray = []
+   let wasBreak = false
+   for ( let i = 0; i < 10; i++ ) {
+      if ( num === i ) {
+         wasBreak = true
+         break
+      }
+      newArray.push(num += 2)
+   }
+
+   if (wasBreak) return "Se interrumpió la ejecución"
+
+   return newArray
 }
 
 function continueStatement(num) {
@@ -135,6 +197,17 @@ function continueStatement(num) {
    // se continua con la siguiente iteración.
    // [PISTA]: utiliza el statement 'continue'.
    // Tu código:
+
+
+   const newArray = [];
+
+   for ( let i = 0; i < 10; i++ ) {
+      if ( i === 5 ) continue
+
+      newArray.push(num += 2)
+   }
+
+   return newArray
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
