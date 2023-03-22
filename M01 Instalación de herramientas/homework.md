@@ -1,4 +1,4 @@
-![HenryLogo](../Assets//logoBannerHenry.png)
+  ![HenryLogo](../Assets//logoBannerHenry.png)
 
 # **HOMEWORK 01 | INSTALACIÓN DE HERRAMIENTAS**
 
